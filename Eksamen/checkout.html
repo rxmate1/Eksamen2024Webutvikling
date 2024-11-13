@@ -39,52 +39,225 @@
         </header>
     <main>
         <section>
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i> Fortsett å handle
+            </a>
+        </section>
+        <section>
             <h2>Kasse</h2>
         </section>
         <section>
             <h2>1. shoppingbagen din</h2>
+
             <article>
                 <picture>
-                    <!--Video fra Pixabay href"https://pixabay.com/photos/drift-speed-transport-snow-spoiler-7248723/-->
                     <img src="Bilder/Bil.jpg" alt="Bilde av en bil som drifter">
                 </picture>
                 <section>
-                <h3>Product name</h3>
-                <p>Kr 1999</p>
-                <p>Farge:beige</p>
-                <section>
-                    <p>Størrelse</p>
-                    <p>Antall</p>
-                    <!--Med hjelp av chatgpt-->
-                    <label for="Antall">Størrelse</label>
-                        <select>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                        </select>
-                    <label for="kvantitet">Antall</label>
-                    <input type="tall">
-                </section>
+                    <h3>Product name</h3>
+                    <p>Kr 1999</p>
+                    <p>Farge: beige</p>
+                    <label>Størrelse</label>
+                    <select class="size">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <label>Antall</label>
+                    <input type="number" class="quantity">
                 </section>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="Bilder/Bil.jpg" alt="Bilde av en bil som drifter">
+                </picture>
                 <section>
-                    
+                    <h3>Product name</h3>
+                    <p>Kr 1999</p>
+                    <p>Farge: beige</p>
+                    <section>
+                        <label>Størrelse</label>
+                        <select class="size">
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                        <label>Antall</label>
+                        <input type="number" class="quantity">
+                    </section>
                 </section>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-trash"></i>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="Bilder/Bil.jpg" alt="Bilde av en bil som drifter">
+                </picture>
+                <section>
+                    <h3>Product name</h3>
+                    <p>Kr 1999</p>
+                    <p>Farge: beige</p>
+                    <section>
+                        <label>Størrelse</label>
+                        <select class="size">
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                        <label>Antall</label>
+                        <input type="number" class="quantity">
+                    </section>
+                </section>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-trash"></i>
             </article>
         </section>
 
+        <section>
+            <h2>2. Dine opplysninger</h2>
+        </section>
+        <form>
+            <h3>Leveringsadresse</h3>
+        <section>
+            <label for="fornavn">Fornavn</label>
+            <input type="text" id="fornavn"  placeholder="Nora*" required>
+
+            <label for="etternavn">Etternavn</label>
+            <input type="text" id="etternavn"  placeholder="Nordman*" required>
+
+            <label for="gateadresse">Gateadresse</label>
+            <input type="text" id="gateadresse"  placeholder="BRA veien 4*" required>
+
+            <label for="postnummer">Postnummer</label>
+            <input type="text" id="postnummer"  placeholder="1752*" required>
+
+            <label for="poststed">Poststed</label>
+            <input type="text" id="poststed"  placeholder="Halden*" required>
+        </section>
+
+        <section>
+            <h3>Kontaktinformasjon</h3>
+        </section>
+
+        <section>
+            <label for="epost">E-post</label>
+            <input type="email" id="epost"  placeholder="Noranordman@hiof.no*" required>
+
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon"  placeholder="+4749***018" required>
+        </section>
+
+        <section>
+            <button type="submit">Lagre</button>
+            <a href="#" class="cancel">Avbryt</a>
+        </section>
+        </form>
+        <form>
+                <h3>3. Levering</h3>
+                <h4>Leveringsvalg</h4>
+            <article>
+                <label>
+                    <input type="radio" name="levering" value="ekspress-levering">
+                </label>
+                <section>
+                    <h4>Express Hjemlevering</h4>
+                    <p>3-4 Virkedager</p>
+                    <p>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. 
+                    *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
+                        <section>
+                            <p>59kr</p> <i class="fa-solid fa-truck"></i>
+                        </section>
+                </section>
+            </article>
+            <article>
+                <label>
+                    <input type="radio" name="levering" value="ekspress-pakke-levering-utleveringsted">
+                </label>
+                <section>
+                    <h4>Express Pakke til utleveringssted</h4>
+                    <p>1-3 Virkedager</p>
+                </section>
+                    <section>
+                        <p>59kr</p> <i class="fa-solid fa-truck-fast"></i>
+                    </section>
+            </article>
+            <article>
+                <label>
+                    <input type="radio" name="levering" value="standard-levering">
+                </label>
+                <section>
+                    <h4>Standard Hjemlevering</h4>
+                    <p>5-8 Virkedager</p>
+                    <p>Levers hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                </section>
+                    <section>
+                        <p>Gratis</p> <i class="fa-solid fa-box"></i>
+                    </section>
+            </article>
+        </form>
+        <form>
+            <section>
+                <h3>Betaling</h3>
+                <h4>Betal med kort</h4>
+                <i class="fa-solid fa-credit-card"></i>
+            </section>
+            <article>
+                <section>
+                    <label for="kortnummer">Kortnummer</label>
+                    <input type="text" id="kortnummer" placeholder="342452*****4435" required>
+
+                    <label for="utløps-dato">Utløpsdato</label>
+                    <input type="text" id="utløps-dato" placeholder="mm/dd/yyyy" required>
+
+                    <label for="cvv">CVC/CVV</label>
+                    <input type="text" id="cvv" placeholder="CVC/CVV" required>
+                </section>
+                <section>
+                    <p>Å betale inkl. mva.</p>
+                    <p id="antall-penger">1199kr</p>
+                    <button type="submit">Fullfør kjøp</button>
+                </section>
+                <section>
+                    <p class="vilkaar">
+                        Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige.
+                        Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger
+                        uriktige eller ufullstendige opplysninger
+                    </p>
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                    <section>
+                        <p>Ja takk! Send nyhetsbrev til meg.</p>
+                    </section>
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                    <section>
+                        <p>Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</p>
+                    </section>
+                </section>
+            </article>
+        </form>
     </main>
     <footer id="kontakt">
         <section>
             <h3>Logo</h3>
-            <p>Nor again is there anyone who loves or pursues </p>
+            <p>Nor again is there anyone who loves or pursues</p>
         </section>
 
         <section>
             <h3>Kontakt</h3>
             <section>
-
                 <h4>Adresse:</h4>
                 <p>B R A Veien 4, 1757 Halden</p>
 
@@ -96,15 +269,16 @@
 
                 <h4>Åpningstider:</h4>
                 <p>Stenger 15:00</p>
-
             </section>
         </section>
+
         <section>
             <h3>Snarveier</h3>
             <a href="#">Produkter</a>
             <a href="#">Kategorier</a>
             <a href="#">Kontakt oss</a>
         </section>
+
         <section>
             <h3>Sosiale medier</h3>
             <a href="https://www.instagram.com" target="_blank">
@@ -119,7 +293,6 @@
             <a href="https://www.pinterest.com" target="_blank">
                 <i class="fa-brands fa-pinterest"></i>
             </a>
-            
         </section>
     </footer>
     </div>
