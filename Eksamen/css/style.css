@@ -1,141 +1,213 @@
-
-
-body{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     background-color: #f9f9f9;
-
 }
 
 #grid-container {
-    display: grid; 
-    grid-template-rows: auto 1fr; 
-    grid-template-columns: 1fr; 
-    width: 100%;
-    min-height: 100vh;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    padding: 0;
+    justify-content: flex-start;
+    width: 100%; 
+    padding: 0 5%; 
+    margin: 0 auto; 
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
 
 #global-header {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 15px;
-    padding: 15px;
-    width: 100%;
-    background-color: #ffffff; 
+    padding: 15px 0;
+    width: 100%; 
+    background-color: #ffffff;
 }
 
-
-.search-bar{
+.search-bar {
     display: flex;
     align-items: center;
-    width: 90%;
-    max-width: 300px;
-    height: 34px; 
-    background-color: rgb(255, 255, 255); 
-    border: 1px solid black; 
-    border-radius: 25px; 
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 300px; 
+    height: 34px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .search-bar input {
-    flex: 1; 
-    border: none; 
-    outline: none; 
-    font-size: 16px; 
-    padding: 10px; 
-    background: none; 
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    background: none;
 }
 
 .search-bar button {
-    background: none; 
-    border: none; 
-    outline: none; 
-    cursor: pointer; 
-    font-size: 18px; 
-    padding: 10px; 
-    color: #333; 
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    color: #333;
 }
 
-.search-bar button i {
-    margin: 0; 
-}
-
-nav ul{
+nav ul {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     gap: 12px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul .logo{
+nav ul .logo {
     font-weight: bold;
     font-size: 2.3em;
-    margin: 30px;
+    margin: 30px 0;
 }
 
-
-nav ul li{
-    list-style: none
+nav ul li {
+    list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     color: black;
     text-decoration: none;
 }
 
-.icons{
+.icons {
     display: flex;
     justify-content: center;
-    flex-direction:row;
     gap: 2rem;
+    width: 100%;
 }
 
 .icons a {
+    text-decoration: none;
     color: black;
-    text-decoration: none; 
-    font-size: 1rem; 
 }
 
-.icons i {
-    font-size: 1rem;
-    color: black; 
-    font-weight: lighter; 
-    background-color: transparent;
+
+
+
+/* Media for Desktop */
+
+
+
+@media (min-width: 1024px) {
+    #global-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+        width: 100%; 
+        background-color: #ffffff;
     }
+    
+    .search-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 300px; 
+        height: 34px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-radius: 25px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .search-bar input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 10px;
+        background: none;
+    }
+    
+    .search-bar button {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 10px;
+        color: #333;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav ul .logo {
+        font-weight: bold;
+        font-size: 2.3em;
+        margin: 30px 0;
+    }
+    
+    nav ul li {
+        list-style: none;
+    }
+    
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    .icons a {
+        text-decoration: none;
+        color: black;
+    }
+    
+
+}
 
 #box-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 90%; 
-    max-width: 400px; 
-    margin: 20px auto; 
-    margin: 0 auto;
-    position: relative; 
-    border-radius: 15px; 
-    overflow: hidden; 
-    box-shadow: none; 
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 #lizard-bilde img {
     width: 100%;
-    height: 600px; 
-    border-radius: 15px; 
-    display: block;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 #header-text {
@@ -146,131 +218,392 @@ nav ul li a{
     height: 100%; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-    color: black;
-    padding: 20px; 
-    background: none; 
+    justify-content: flex-end; 
+    align-items: flex-end; 
+    text-align: right;
+    gap: 10px; 
+    color: white; 
+    padding: 50px; 
+    background: rgba(10, 10, 10, 0.2); 
+    box-sizing: border-box; 
 }
 
 #header-text h2 {
     font-size: 2rem;
-    margin: 0 0 15px;
+    font-weight: bold;
+    margin-bottom: 50px; 
+    color: white; 
 }
 
 #header-text p {
     font-size: 1.2rem;
-    margin: 0 0 20px; 
-    color: black;
+    margin-bottom: 20px; 
+    color: white; 
 }
 
 #header-text button {
     padding: 10px 20px;
-    font-size: 1rem;
+    height: 100%;
+    max-height: 60px;
+    font-size: 1.5rem;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
 }
 
-
-
-
-#global-main{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 15px;
-    width: 100%;
-    background-color: #ffffff; 
-}
-
-#Populære-produkter{
+#global-main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 90%; 
-    max-width: 400px; 
-    margin: 20px auto; 
-    margin: 0 auto;
-    position: relative; 
-    border-radius: 15px; 
-    overflow: hidden; 
-    box-shadow: none; 
+    gap: 15px;
+    padding: 15px 0;
+    width: 100%;
 }
 
+#Populære-produkter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.2rem;
+}
+
+#Populære-produkter section h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#Populære-produkter section p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+#Populære-produkter nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#Populære-produkter nav a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 10px;
+    background-color: white;
+    color: black;
+    border: 1.5px solid #ccc;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#Populære-produkter nav a.button:hover {
+    background-color: black;
+    color: white;
+}
 
 .Product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
+    width: 100%;
+    margin: 20px 0;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 25px;
     overflow: hidden;
 }
 
 .Product-card picture img {
     width: 100%;
+    height: auto;
     object-fit: cover;
-    border-radius: 10px;
-    height: 600px;
+    border-radius: 25px;
 }
 
 .Product-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    width: 90%; 
-    padding: 10px 0;
-    font-size: 1rem;
-}
-
-.Product-details section {
-    margin: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; 
 }
 
 .Product-details .product-name a {
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #333;
+    color: black;
     text-decoration: none;
 }
 
 .Product-details .product-price {
+    font-size: 1rem;
     font-weight: bold;
-    color: #000;
-    text-align: right;
+    color: black;
+    text-align: right; 
 }
 
 .Product-reviews {
     display: flex;
     align-items: center;
-    justify-content: left;
-    width: 90%; 
-    margin: 10px 0;
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
     gap: 5px;
+    width: 100%;
+    font-size: 1rem;
+    color: black;
 }
 
 .Product-reviews section {
     display: flex;
-    gap: 7px; 
+    gap: 5px;
 }
 
 .Product-reviews i {
     color: black;
+}
+
+#Populære-kategorier section h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#Populære-kategorier section p{
+    text-align: center;
     font-size: 1rem;
 }
-
-.Product-reviews p {
-
+#grid-container_2 {
+    display: grid; 
+    grid-template-columns: repeat(1, 1fr); /* 1 kolonne, Mobile */
+    gap: 1.5rem; 
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
+
+#grid-container_2 section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#grid-container_2 section p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Media for Desktop og Tablet */
+
+@media (min-width: 768px) {
+    #grid-container_2 {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolonner, Tablet */
+    }
+}
+
+@media (min-width: 1024px) {
+    #grid-container_2 {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolonner, Desktop */
+    }
+}
+
+.Category-card {
+    position: relative; 
+    overflow: hidden;
+    border-radius: 25px;
+    width: 100%;
+    height: 300px;
+}
+
+.Category-card .Kategori-bilder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: blur(3px); 
+    border-radius: 25px; 
+}
+
+.Category-card .Category-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Fått litt hjelp av Chatgpt å klare å justere text på midten av bildet uten bruk av flexbox */
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.Anmeldelser {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.Anmeldelser h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left; 
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.Anmeldelser section {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    gap: 20px; 
+    padding-bottom: 40px;
+}
+
+.Anmeldelser article {
+    flex: 0 0 300px; 
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.Anmeldelser article picture img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.Anmeldelser article h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    text-align: left;
+}
+
+.Anmeldelser article .stars {
+    display: flex;
+    gap: 5px;
+    color: black;
+}
+
+.Anmeldelser article p {
+    font-size: 0.9rem;
+    text-align: left;
+    color: #000000;
+    margin: 3;
+}
+
+#Kontakt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    box-sizing: border-box;
+    gap: 25px;
+}
+
+#Kontakt #Logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#Kontakt #Logo h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#Kontakt #Logo p {
+    font-size: 0.9rem;
+    color: black;
+}
+
+#Kontakt #Kontakt-oss-Snarveier {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+    width: 100%;
+    align-items: flex-start; 
+}
+
+
+#Kontakt #Kontakt-oss {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 65%; 
+}
+
+#Kontakt #Kontakt-oss section {
+    display: flex;
+    align-items: flex-start; 
+    gap: 10px;
+}
+
+#Kontakt #Kontakt-oss section i {
+    font-size: 1.2rem;
+    color: black;
+}
+
+#Kontakt #Kontakt-oss section h4,
+#Kontakt #Kontakt-oss section p {
+    font-size: 0.9rem;
+    color: black;
+    margin: 0;
+}
+
+#Kontakt #Snarveier {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%; 
+    align-items: flex-start; 
+}
+
+#Kontakt #Snarveier a {
+    font-size: 0.9rem;
+    color: black;
+    text-decoration: none;
+}
+
+#Kontakt #Sosiale-medier {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    align-items: flex-start; 
+}
+
+#Kontakt #Sosiale-medier h3 {
+    font-size: 1.3rem;
+}
+
+#Kontakt #Sosiale-medier section {
+    display: flex; 
+    gap: 15px; 
+}
+
+#Kontakt #Sosiale-medier section a {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+

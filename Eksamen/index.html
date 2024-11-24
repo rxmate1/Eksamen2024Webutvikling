@@ -44,8 +44,21 @@
                     <img src="Bilder/Lizard.jpg" alt="Bilde av en øgle">
                 </picture>
                 <section id="header-text">
-                    <h2>Et harum quidem rerum facilis</h2>
-                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque.</p>
+                    <h2>
+                        Et harum <br> 
+                        quidem rerum <br> 
+                        facilis <br> 
+                        est et <br> 
+                        expedita <br> 
+                        distinctio
+                    </h2>
+                    <p> Nam libero tempore, <br>
+                        cum soluta nobis <br>
+                        est eligendi optio <br>
+                        cumque nihil impedit <br>
+                        quo minus id quod <br>
+                        maxime placeat <br>
+                        facere possimus</p>
                     <button type="button">Les mer</button>
                 </section>
             </section>
@@ -53,13 +66,13 @@
 
             <section id="Populære-produkter">
                 <section>
-                <h2>Våre mest populære produkter</h2>
-                <p>Oppdag det beste av det beste</p>
+                    <h2>Våre mest populære produkter</h2>
+                    <p>Oppdag det beste av det beste</p>
                 </section>
                 <nav>
-                    <button>New product</button>
-                    <button>Special price</button>
-                    <button>Best sellers</button>
+                    <a href="#" class="button">New product</a>
+                    <a href="#" class="button">Special price</a>
+                    <a href="#" class="button">Best sellers</a>
                 </nav>
                 
                 <article class="Product-card">
@@ -202,59 +215,74 @@
             </section>
 
             <section id="Populære-kategorier">
-                <h2>Våre mest populære kategorier</h2>
-                <p>Oppdag det beste av det beste</p>
-<!--Bruk <figcaption for å legge tekst i bilder-->
-                <article>
-                    <picture>
-                        <img class="Kategori-bilder" src="Bilder/Bies.jpg" alt="Bilde av en bies">
-                    </picture>
-                    <h3>Category 1</h3>
-                </article>
+                <section>
+                    <h2>Våre mest populære kategorier</h2>
+                    <p>Oppdag det beste av det beste</p>
+                </section>
+                <div id="grid-container_2">
+                    <article class="Category-card">
+                        <picture>
+                            <img class="Kategori-bilder" src="Bilder/Bies.jpg" alt="Bilde av en bies">
+                        </picture>
+                        <section class="Category-name">
+                            <h3>Category 1</h3>
+                        </section>
+                    </article>
 
-                <article>
-                    <picture>
-                        <img class="Kategori-bilder" src="Bilder/Dog.jpg" alt="Bilde av hund omringet med blomster">
-                    </picture>
-                    <h3>Category 2</h3>
-                </article>
+                    <article class="Category-card">
+                        <picture>
+                            <img class="Kategori-bilder" src="Bilder/Dog.jpg" alt="Bilde av hund omringet med blomster">
+                        </picture>
+                        <section class="Category-name">
+                            <h3>Category 2</h3>
+                        </section>
+                    </article>
 
-                <article>
-                    <picture>
-                        <img class="Kategori-bilder" src="Bilder/Person.png" alt="Bilde av en Person">
-                    </picture>
-                    <h3>Category 3</h3>
-                </article>
+                    <article class="Category-card">
+                        <picture>
+                            <img class="Kategori-bilder" src="Bilder/Person.png" alt="Bilde av en Person">
+                        </picture>
+                        <section class="Category-name">
+                            <h3>Category 3</h3>
+                        </section> 
+                    </article>
 
-                <article>
-                    <picture>
-                        <img class="Kategori-bilder" src="Bilder/Python.jpg" alt="Bilde av en Python">
-                    </picture>
-                    <h3>Category 4</h3>
-                </article>
+                    <article class="Category-card">
+                        <picture>
+                            <img class="Kategori-bilder" src="Bilder/Python.jpg" alt="Bilde av en Python">
+                        </picture>
+                        <section class="Category-name">
+                            <h3>Category 4</h3>
+                        </section>  
+                    </article>
 
-                <article>
-                    <picture>
-                        <img class="Kategori-bilder" src="Bilder/Train.jpg" alt="Bilde av et tog">
-                    </picture>
-                    <h3>Category 5</h3>
-                </article>
+                    <article class="Category-card">
+                        <picture>
+                            <img class="Kategori-bilder" src="Bilder/Train.jpg" alt="Bilde av et tog">
+                        </picture>
+                        <section class="Category-name">
+                            <h3>Category 5</h3>
+                        </section>
+                    </article>
+                </div>
             </section>
 
-            <section class="anmeldelser">
+            <section class="Anmeldelser">
                 <h2>Anmeldelser</h2>
                 <section>
                     <article>
                         <picture>
                             <!--Video fra pixabay href"https://pixabay.com/photos/teddy-cuddly-toy-stuffed-animal-8783348/"-->
-                            <img src="Bilder/Teddy.jpg" alt="bilde av en teddybjørn">
+                            <img class="Anmeldelser-bilde" src="Bilder/Teddy.jpg" alt="bilde av en teddybjørn">
                         </picture>
                         <h3>Teddy Bober</h3>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio</p>
                     </article>
                     <article>
@@ -263,11 +291,13 @@
                             <img src="Bilder/Teddy.jpg" alt="bilde av en teddybjørn">
                         </picture>
                         <h3>Teddy Bober</h3>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio</p>
                     </article>
                     <article>
@@ -276,11 +306,13 @@
                             <img src="Bilder/Teddy.jpg" alt="bilde av en teddybjørn">
                         </picture>
                         <h3>Teddy Bober</h3>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio</p>
                     </article>
                     <article>
@@ -289,63 +321,77 @@
                             <img src="Bilder/Teddy.jpg" alt="bilde av en teddybjørn">
                         </picture>
                         <h3>Teddy Bober</h3>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </section>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio</p>
                     </article>
                 </section>
             </section>
         </main>
 
-        <footer id="kontakt">
-            <section>
+        <footer id="Kontakt">
+            <section id="Logo">
                 <h3>Logo</h3>
-                <p>Nor again is there anyone who loves or pursues </p>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
             </section>
-
-            <section>
-                <h3>Kontakt</h3>
-                <section>
-
-                    <h4>Adresse:</h4>
-                    <p>B R A Veien 4, 1757 Halden</p>
-
-                    <h4>Telefon:</h4>
-                    <p>69 60 80 00</p>
-
-                    <h4>E-post:</h4>
-                    <p>halden@hiof.no</p>
-
-                    <h4>Åpningstider:</h4>
-                    <p>Stenger 15:00</p>
-
+        
+            <section id="Kontakt-oss-Snarveier">
+                <section id="Kontakt-oss">
+                    <h3>Kontakt</h3>
+                    <section>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <section>
+                            <h4>Adresse:</h4>
+                            <p>B R A Veien 4, 1757 Halden</p>
+                        </section>
+                    </section>
+                    <section>
+                        <i class="fa-solid fa-phone"></i>
+                        <section>
+                            <h4>Telefon:</h4>
+                            <p>69 60 80 00</p>
+                        </section>
+                    </section>
+                    <section>
+                        <i class="fa-solid fa-envelope"></i>
+                        <section>
+                            <h4>E-post:</h4>
+                            <p>halden@hiof.no</p>
+                        </section>
+                    </section>
+                    <section>
+                        <i class="fa-regular fa-clock"></i>
+                        <section>
+                            <h4>Åpningstider:</h4>
+                            <p>Stenger 15:00</p>
+                        </section>
+                    </section>
+                </section>
+        
+                <section id="Snarveier">
+                    <h3>Snarveier</h3>
+                    <a href="#">Produkter</a>
+                    <a href="#">Kategorier</a>
+                    <a href="#">Kontakt oss</a>
                 </section>
             </section>
-            <section>
-                <h3>Snarveier</h3>
-                <a href="#">Produkter</a>
-                <a href="#">Kategorier</a>
-                <a href="#">Kontakt oss</a>
-            </section>
-            <section>
+        
+            <section id="Sosiale-medier">
                 <h3>Sosiale medier</h3>
-                <a href="https://www.instagram.com" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://www.pinterest.com" target="_blank">
-                    <i class="fa-brands fa-pinterest"></i>
-                </a>
+                <section>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                </section>
             </section>
         </footer>
+        
     </div>  
 </body>
 </html>
