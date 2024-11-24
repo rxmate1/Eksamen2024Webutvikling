@@ -1,8 +1,15 @@
 
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+
 }
 
 #grid-container {
@@ -10,7 +17,11 @@ body{
     grid-template-rows: auto 1fr; 
     grid-template-columns: 1fr; 
     width: 100%;
-    height: 100vh; 
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
 }
 
 
@@ -18,6 +29,7 @@ body{
     display: flex; 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     padding: 15px;
     width: 100%;
@@ -28,7 +40,8 @@ body{
 .search-bar{
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
     height: 34px; 
     background-color: rgb(255, 255, 255); 
     border: 1px solid black; 
@@ -63,6 +76,7 @@ nav ul{
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -96,23 +110,167 @@ nav ul li a{
 }
 
 .icons i {
-    font-size: 2rem; /* Adjust size */
-    color: black; /* Set color */
-    font-weight: lighter; /* Mimic the regular style */
+    font-size: 1rem;
+    color: black; 
+    font-weight: lighter; 
     background-color: transparent;
     }
 
+#box-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%; 
+    max-width: 400px; 
+    margin: 20px auto; 
+    margin: 0 auto;
+    position: relative; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: none; 
+}
+
+#lizard-bilde img {
+    width: 100%;
+    height: 600px; 
+    border-radius: 15px; 
+    display: block;
+}
+
+#header-text {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    color: black;
+    padding: 20px; 
+    background: none; 
+}
+
+#header-text h2 {
+    font-size: 2rem;
+    margin: 0 0 15px;
+}
+
+#header-text p {
+    font-size: 1.2rem;
+    margin: 0 0 20px; 
+    color: black;
+}
+
+#header-text button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+}
 
 
 
-#Box-header {
+
+#global-main{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    background-color: #ffffff; 
+}
+
+#Populære-produkter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%; 
+    max-width: 400px; 
+    margin: 20px auto; 
+    margin: 0 auto;
+    position: relative; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: none; 
+}
+
+
+.Product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Product-card picture img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 600px;
+}
+
+.Product-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 900px;
+    width: 90%; 
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.Product-details section {
+    margin: 0;
+}
+
+.Product-details .product-name a {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.Product-details .product-price {
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+}
+
+.Product-reviews {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 90%; 
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    gap: 5px;
+}
+
+.Product-reviews section {
+    display: flex;
+    gap: 7px; 
+}
+
+.Product-reviews i {
+    color: black;
+    font-size: 1rem;
+}
+
+.Product-reviews p {
+
 }
