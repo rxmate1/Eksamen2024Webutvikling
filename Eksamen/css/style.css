@@ -69,7 +69,6 @@ nav ul {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -106,91 +105,51 @@ nav ul li a {
 
 /* Media for Desktop */
 
-
-
 @media (min-width: 1024px) {
     #global-header {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 15px;
-        padding: 15px 0;
-        width: 100%; 
-        background-color: #ffffff;
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
+        padding: 30px 20px;
+        gap: 20px; 
+        width: 100%;
     }
-    
+
     .search-bar {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-width: 300px; 
-        height: 34px;
-        background-color: rgb(255, 255, 255);
-        border: 1px solid black;
-        border-radius: 25px;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-
+        max-width: 300px;
     }
 
-    .search-bar input {
-        flex: 1;
-        border: none;
-        outline: none;
-        font-size: 16px;
-        padding: 10px;
-        background: none;
+    nav {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
     }
-    
-    .search-bar button {
-        background: none;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        font-size: 18px;
-        padding: 10px;
-        color: #333;
-    }
-    
+
     nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    
-    nav ul .logo {
-        font-weight: bold;
-        font-size: 2.3em;
-        margin: 30px 0;
-    }
-    
-    nav ul li {
-        list-style: none;
-    }
-    
-    nav ul li a {
-        color: black;
-        text-decoration: none;
-    }
-    
-    .icons {
-        display: flex;
+        flex-direction: row;
         justify-content: center;
-        gap: 2rem;
-        width: 100%;
+        gap: 30px; 
     }
-    
-    .icons a {
-        text-decoration: none;
-        color: black;
-    }
-    
 
+    .icons {
+        justify-content: flex-end; 
+        max-width: 200px; 
+        font-size: 1.2rem;
+    }
 }
 
+/* General Global Main Styling */
+#global-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    width: 100%;
+}
+
+/* Header Section */
 #box-header {
     display: flex;
     flex-direction: column;
@@ -253,14 +212,134 @@ nav ul li a {
     color: black;
 }
 
-#global-main {
+/* Slider Container */
+#slider {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 15px;
-    padding: 15px 0;
+    justify-content: center;
+    gap: 10px;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+}
+
+#slides {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
     width: 100%;
 }
+
+.slide {
+    flex: 0 0 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+}
+
+#slides .slide:nth-child(1) .slide-text {
+    text-align: right;
+    right: 10%;
+    left: auto;
+}
+
+#slides .slide:nth-child(2) {
+    background-color: lightgray; 
+}
+
+#slides .slide:nth-child(2) .slide-text {
+    text-align: left;
+    left: 10%;
+}
+
+#slides .slide:nth-child(3) .slide-text {
+    text-align: left;
+    left: 10%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 60px;
+    color: white;
+    padding: 20px;
+    max-width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    gap: 10px;
+}
+
+.slide-text h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.slide-text button {
+    margin-top: auto; /* Push the button to the bottom of the text section */
+    align-self: flex-start; /* Align the button to the left */
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Navigation Buttons */
+#slider button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+}
+
+#slider #prev {
+    left: 10px;
+}
+
+#slider #next {
+    right: 10px;
+}
+
+@media (max-width: 1023px) {
+    #slider {
+        display: none;
+    }
+
+    #box-header {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    #box-header {
+        display: none;
+    }
+}
+
+
+
 
 #Populære-produkter {
     display: flex;
@@ -603,7 +682,3 @@ nav ul li a {
     color: black;
     text-decoration: none;
 }
-
-
-
-
