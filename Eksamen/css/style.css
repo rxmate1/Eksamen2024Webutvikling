@@ -3,9 +3,10 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
     background-color: #f9f9f9;
 }
@@ -139,7 +140,6 @@ nav ul li a {
     }
 }
 
-/* General Global Main Styling */
 #global-main {
     display: flex;
     flex-direction: column;
@@ -149,7 +149,6 @@ nav ul li a {
     width: 100%;
 }
 
-/* Header Section */
 #box-header {
     display: flex;
     flex-direction: column;
@@ -212,7 +211,6 @@ nav ul li a {
     color: black;
 }
 
-/* Slider Container */
 #slider {
     display: flex;
     align-items: center;
@@ -244,11 +242,10 @@ nav ul li a {
 #slides .slide:nth-child(1) .slide-text {
     text-align: right;
     right: 10%;
-    left: auto;
 }
 
-#slides .slide:nth-child(2) {
-    background-color: lightgray; 
+#slider .slide:nth-child(1) .button2{
+    right: 10%;
 }
 
 #slides .slide:nth-child(2) .slide-text {
@@ -275,7 +272,7 @@ nav ul li a {
     max-width: 80%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Arrange items vertically */
+    flex-direction: column; 
     gap: 10px;
 }
 
@@ -291,35 +288,45 @@ nav ul li a {
 }
 
 .slide-text button {
-    margin-top: auto; /* Push the button to the bottom of the text section */
-    align-self: flex-start; /* Align the button to the left */
+    margin-top: auto;
+    align-self: flex-start; 
     padding: 10px 20px;
-    background-color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 /* Navigation Buttons */
-#slider button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+#slider .button2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
     border: none;
     font-size: 1.5rem;
-    cursor: pointer;
     border-radius: 50%;
     padding: 10px;
     position: absolute;
     top: 100%;
-    transform: translateY(-50%);
 }
 
 #slider #prev {
+    position: absolute;
     left: 10px;
+    z-index: 10;
+    color: black;
+    background-color: rgb(180, 180, 180);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
 }
 
 #slider #next {
+    position: absolute;
     right: 10px;
+    color: black;
+    background-color: rgb(180, 180, 180);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
 }
 
 @media (max-width: 1023px) {
@@ -337,6 +344,7 @@ nav ul li a {
         display: none;
     }
 }
+
 
 
 
@@ -392,6 +400,7 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 350px;
     margin: 20px 0;
     background-color: #fff;
     border-radius: 25px;
@@ -446,6 +455,81 @@ nav ul li a {
     color: black;
 }
 
+@media (min-width: 1024px) {
+    #Populære-produkter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #Populære-produkter section {
+        display: flex;
+        flex-wrap: wrap; /* Allows rows of products */
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .Product-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+        margin: 1rem;
+    }
+
+    .Product-card picture img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .Product-details {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .Product-details .product-name a {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+    .Product-details .product-price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: black;
+    }
+
+    .Product-reviews {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        gap: 5px; 
+    }
+
+    .Product-reviews section {
+        display: flex;
+        gap: 3px; /* Space between individual stars */
+    }
+
+    .Product-reviews i {
+        color: #000;
+    }
+
+    .Product-reviews p {
+        font-size: 0.9rem;
+        color: black;
+        margin: 0;
+    }
+}
+
 #Populære-kategorier section h2{
     text-align: center;
     font-size: 2rem;
@@ -476,6 +560,91 @@ nav ul li a {
     margin-bottom: 1rem;
 }
 
+#Populære-kategorier #grid-container_2 {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "card1 card2 card3"
+        "card4 card4 card5"; /* Specific layout for cards 4 and 5 */
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Category-card:nth-child(1) {
+    grid-area: card1;
+    max-width: 386px;
+}
+
+.Category-card:nth-child(2) {
+    grid-area: card2;
+    max-width: 386px;
+}
+
+.Category-card:nth-child(3) {
+    grid-area: card3;
+    max-width: 386px;
+
+}
+
+.Category-card:nth-child(4) {
+    grid-area: card4;
+    max-width: 864px;
+    grid-column: span 2; /* Spans two columns */
+}
+
+.Category-card:nth-child(5) {
+    grid-area: card5;
+    max-width: 300px;
+}
+
+/* Ensuring background images cover the entire card */
+.Category-card picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.Category-card {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Adjust height as needed */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Category-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+    #Populære-kategorier #grid-container_2 {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"; /* Stack all cards on smaller screens */
+        grid-template-columns: 1fr;
+    }
+
+    .Category-card {
+        max-width: 100%;
+    }
+}
+
 /* Media for Desktop og Tablet */
 
 @media (min-width: 768px) {
@@ -504,6 +673,16 @@ nav ul li a {
     object-fit: cover; 
     filter: blur(3px); 
     border-radius: 25px; 
+}
+
+.Category-card .Kategori1-3{
+    width: 100%;
+    max-width: 386px;
+}
+
+.Category-card .Kategori4{
+    width: 100%;
+    min-width: 864px;
 }
 
 .Category-card .Category-name {
