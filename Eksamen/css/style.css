@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 100%;
     max-width: 1200px;
@@ -101,7 +101,15 @@ nav ul li a {
     color: black;
 }
 
+i.fa-regular {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
 
+i.fa-solid {
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: none;
+}
 
 
 /* Media for Desktop */
@@ -242,6 +250,7 @@ nav ul li a {
 #slides .slide:nth-child(1) .slide-text {
     text-align: right;
     right: 10%;
+    top: 5%;
 }
 
 #slider .slide:nth-child(1) .button2{
@@ -251,11 +260,13 @@ nav ul li a {
 #slides .slide:nth-child(2) .slide-text {
     text-align: left;
     left: 10%;
+    top: 5%;
 }
 
 #slides .slide:nth-child(3) .slide-text {
     text-align: left;
     left: 10%;
+    top: 5%;
 }
 
 .slide img {
@@ -296,16 +307,15 @@ nav ul li a {
     cursor: pointer;
 }
 
-/* Navigation Buttons */
 #slider .button2 {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(255, 254, 254);
     color: rgb(0, 0, 0);
     border: none;
     font-size: 1.5rem;
-    border-radius: 50%;
+    border-radius: 25px;
     padding: 10px;
     position: absolute;
-    top: 100%;
+    top: 90%;
 }
 
 #slider #prev {
@@ -357,14 +367,16 @@ nav ul li a {
     gap: 1.2rem;
 }
 
-#Populære-produkter section h2 {
-    font-size: 2rem;
+#Populære-produkter #header1 {
     text-align: center;
 }
 
-#Populære-produkter section p {
+#Populære-produkter #header1 h2 {
+    font-size: 2rem;
+}
+
+#Populære-produkter #header1 p {
     font-size: 1rem;
-    text-align: center;
 }
 
 #Populære-produkter nav {
@@ -400,7 +412,7 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
     margin: 20px 0;
     background-color: #fff;
     border-radius: 25px;
@@ -451,9 +463,7 @@ nav ul li a {
     gap: 5px;
 }
 
-.Product-reviews i {
-    color: black;
-}
+/* Populære produkter media desktop */
 
 @media (min-width: 1024px) {
     #Populære-produkter {
@@ -461,74 +471,86 @@ nav ul li a {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin: 1rem;
+        gap: 2rem;
     }
 
-    #Populære-produkter section {
+    #Populære-produkter section #header1 {
         display: flex;
-        flex-wrap: wrap; /* Allows rows of products */
-        gap: 20px;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
+        margin-bottom: 2rem;
+    }
+    #Populære-produkter section:last-of-type {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1rem;
+        width: 100%;
+        max-width: 1200px;
+        justify-items: center;
+        gap: 2rem;
     }
 
     .Product-card {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         border-radius: 15px;
         width: 100%;
         max-width: 350px;
-        box-sizing: border-box;
+        height: 100%;
+        overflow: hidden;
         margin: 1rem;
+        text-align: center; 
+        margin-bottom: 0;
     }
 
     .Product-card picture img {
         width: 100%;
-        height: auto;
+        height: 200px; 
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 25px;
     }
 
     .Product-details {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 0.5rem;
     }
 
-    .Product-details .product-name a {
-        font-size: 1.1rem;
+    .Product-details .product-name {
+        font-size: 1.2rem;
         font-weight: bold;
-        color: black;
-        text-decoration: none;
+        color: #333;
+        margin-bottom: 0.5rem;
     }
 
     .Product-details .product-price {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: bold;
-        color: black;
+        color: #000;
     }
 
     .Product-reviews {
         display: flex;
+        flex-direction: row; 
         align-items: center;
-        margin-top: 10px;
-        gap: 5px; 
+        justify-content: center;
+        gap: 0.5rem; 
+        margin-top: 0.5rem;
     }
 
     .Product-reviews section {
         display: flex;
-        gap: 3px; /* Space between individual stars */
-    }
-
-    .Product-reviews i {
-        color: #000;
+        align-items: center;
+        gap: 0.2rem; 
     }
 
     .Product-reviews p {
         font-size: 0.9rem;
-        color: black;
-        margin: 0;
     }
 }
+
 
 #Populære-kategorier section h2{
     text-align: center;
@@ -560,45 +582,70 @@ nav ul li a {
     margin-bottom: 1rem;
 }
 
-#Populære-kategorier #grid-container_2 {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-areas:
-        "card1 card2 card3"
-        "card4 card4 card5"; /* Specific layout for cards 4 and 5 */
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    width: 100%;
-    box-sizing: border-box;
+/* Desktop */
+@media (min-width: 1024px) {
+    #Populære-kategorier #grid-container_2 {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card4 card5";
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .Category-card:nth-child(3) {
+        grid-area: card3;
+        max-width: 386px;
+    }
+
+    .Category-card:nth-child(4) {
+        grid-area: card4;
+        grid-column: span 2;
+        max-width: 864px;
+    }
+
+    .Category-card:nth-child(5) {
+        grid-area: card5;
+        max-width: 300px;
+    }
 }
 
-.Category-card:nth-child(1) {
-    grid-area: card1;
-    max-width: 386px;
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Populære-kategorier #grid-container_2 {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card3"
+            "card4 card5";
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .Category-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .Category-card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .Category-card:nth-child(5) {
+        grid-area: card5;
+    }
 }
 
-.Category-card:nth-child(2) {
-    grid-area: card2;
-    max-width: 386px;
+/* Max for mobil */
+@media (max-width: 767px) {
+    #Populære-kategorier #grid-container_2 {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5";
+        grid-template-columns: 1fr;
+    }
 }
 
-.Category-card:nth-child(3) {
-    grid-area: card3;
-    max-width: 386px;
-
-}
-
-.Category-card:nth-child(4) {
-    grid-area: card4;
-    max-width: 864px;
-    grid-column: span 2; /* Spans two columns */
-}
-
-.Category-card:nth-child(5) {
-    grid-area: card5;
-    max-width: 300px;
-}
-
-/* Ensuring background images cover the entire card */
 .Category-card picture img {
     width: 100%;
     height: 100%;
@@ -606,58 +653,6 @@ nav ul li a {
     border-radius: 15px;
 }
 
-.Category-card {
-    position: relative;
-    overflow: hidden;
-    height: 300px; /* Adjust height as needed */
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Category-name {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-/* Responsive Design */
-@media (max-width: 1023px) {
-    #Populære-kategorier #grid-container_2 {
-        grid-template-areas:
-            "card1"
-            "card2"
-            "card3"
-            "card4"
-            "card5"; /* Stack all cards on smaller screens */
-        grid-template-columns: 1fr;
-    }
-
-    .Category-card {
-        max-width: 100%;
-    }
-}
-
-/* Media for Desktop og Tablet */
-
-@media (min-width: 768px) {
-    #grid-container_2 {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolonner, Tablet */
-    }
-}
-
-@media (min-width: 1024px) {
-    #grid-container_2 {
-        grid-template-columns: repeat(3, 1fr); /* 3 kolonner, Desktop */
-    }
-}
 
 .Category-card {
     position: relative; 
@@ -725,7 +720,9 @@ nav ul li a {
 }
 
 .Anmeldelser article {
-    flex: 0 0 300px; 
+    flex: 0 0 300px;
+    width: 100%;
+    max-width: 289px;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 5px 10px black;
@@ -860,4 +857,415 @@ nav ul li a {
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    #Kontakt {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 15px;
+        background-color: #fff;
+        box-sizing: border-box;
+        gap: 25px;
+    }
+
+    #Kontakt-oss-Snarveier-Sosiale-medier {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+        width: 100%;
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+/* Check out siden nedover */
+
+/* Link Styling */
+#Fortsett-handlingen a {
+    text-decoration: none;
+    color: purple;
+    font-weight: bold;
+}
+
+#Fortsett-handlingen a i {
+    color: purple;
+}
+
+#Kasse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6rem;
+}
+
+#Shopping-bag {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+#Shopping-bag h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#Shopping-bag article img {
+    width: 100%;
+    max-width: 70%;
+}
+
+#Shopping-bag .Product-details-2 {
+    padding: 1.3rem;
+    flex-grow: 1; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#Shopping-bag .Product-details-2 h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#Shopping-bag .Product-details-2 p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#Shopping-bag .Product-details-2 .size {
+    width: 20%;
+    height: 40px;
+    border: none;
+}
+
+#Shopping-bag .Product-details-2 .quantity {
+    width: 20%;
+    height: 40px;
+    border: solid rgb(207, 207, 207) 0.5px;
+}
+
+#Shopping-bag .Product-details-2 #Product-ikoner{
+    padding: 2rem;
+}
+
+#Information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+#Information h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Information #fornavn {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Information #etternavn {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Information #gateadresse {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Information #postnummer {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Information #poststed {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Information #epost{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#Information #telefon{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+#Information #Lagre-Avbryt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+#Information section button{
+    width: 90%;
+    height: 50px;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #474747;
+    color: white;
+}
+
+#Information #Lagre-Avbryt #cancel{
+    color: blue;
+}
+
+#Levering{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+#Levering h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Express-hjemlevering{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+#Express-pakke-levering{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+#Standard-levering{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+.levering-ikoner{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+#Betaling{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+#Betaling h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#Betaling #Betaling-ikon{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+}
+
+#Betaling #kortnummer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+#Betaling #utløps-dato{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+    color: black;
+}
+    
+
+
+#Betaling #cvv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    padding: 1.5rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+#Betaling #Box-kjop{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    border: solid rgb(228, 228, 228) 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+#Betaling #Box-kjop section p{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#Betaling #Box-kjop section #antall-penger{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#Betaling #Box-kjop section button{
+    font-size: 1.2rem;
+    width: 100%;
+    height: 60px;
+    background-color: #474747;
+    color: white;
+    border: none;
+}
+
+#Betaling #Box-kjop #nyhetsbrev{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+#Betaling #Box-kjop #tilbud{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (min-width:1024px) {
+    #Shopping-bag {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    #Shopping-bag article {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 100%;
+        max-width: 900px; 
+        border: 1px solid #e0e0e0;
+        padding: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    #Shopping-bag img {
+        max-width: 200px;
+        object-fit: cover;
+    }
+
+    #Shopping-bag .Product-details-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .Størrelse-Antall {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .size, .quantity {
+        width: 80px;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    i.fa-heart, i.fa-trash {
+        font-size: 1.5rem;
+    }
+
+    .Product-details-2 i {
+        margin-top: 1rem;
+    }
+
+    .Product-details-2 form {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
 }

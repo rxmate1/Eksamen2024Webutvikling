@@ -12,287 +12,311 @@
 <body>
     <div id="grid-container">
         <header id="global-header">
-            <form class="search" role="search">
-                <input type="text" placeholder="Søk...">
-                <button>Søk</button>
+            <form class="search-bar" role="search">
+                <input type="text" placeholder="søk her">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <nav>
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="#Populære-produkter">Produkter</a></li>
-                    <li><a href="index.html">Logo</a></li>
+                    <li class="logo"><a href="index.html">Logo</a></li>
                     <li><a href="#Populære-kategorier">Kategorier</a></li>
                     <li><a href="#kontakt">Kontakt oss</a></li>
                 </ul>
             </nav>
-            <section>
+            <section class="icons">
                 <a href="#">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-regular fa-user"></i>
                 </a>
                 <a href="#">
                     <i class="fa-regular fa-heart"></i>
                 </a>
                 <a href="checkout.html">
                     <i class="fa-solid fa-cart-shopping"></i>
-                </a>                
+                </a>    
             </section>
         </header>
     <main>
-        <section>
+        <section id="Fortsett-handlingen">
             <a href="index.html">
                 <i class="fa-solid fa-arrow-left"></i> Fortsett å handle
             </a>
         </section>
-        <section>
+        <section id="Kasse">
             <h2>Kasse</h2>
         </section>
-        <section>
+        <section id="Shopping-bag">
             <h2>1. shoppingbagen din</h2>
-
             <article>
-                <picture>
-                    <img src="Bilder/Bil.jpg" alt="Bilde av en bil som drifter">
-                </picture>
-                <section>
+                <img src="Bilder/Bil.jpg" alt="Bilde av en bil som drifter">
+                <section class="Product-details-2">
                     <h3>Product name</h3>
                     <p>Kr 1999</p>
                     <p>Farge: beige</p>
-                    <label>Størrelse</label>
-                    <select class="size">
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                    <label>Antall</label>
-                    <input type="number" class="quantity">
+                    <section class="Størrelse-Antall">
+                        <form>
+                            <label>Størrelse</label>
+                            <select class="size">
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <label>Antall</label>
+                            <input type="number" class="quantity">
+                        </form>
+                    </section>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
                 </section>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-trash"></i>
             </article>
 
             <article>
                 <picture>
                     <img src="Bilder/Bil.jpg" alt="Bilde av en bil som drifter">
                 </picture>
-                <section>
+                <section class="Product-details-2">
                     <h3>Product name</h3>
                     <p>Kr 1999</p>
                     <p>Farge: beige</p>
-                    <section>
-                        <label>Størrelse</label>
-                        <select class="size">
-                            <option>XS</option>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <label>Antall</label>
-                        <input type="number" class="quantity">
+                    <section class="Størrelse-Antall">
+                        <form>
+                            <label>Størrelse</label>
+                            <select class="size">
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <label>Antall</label>
+                            <input type="number" class="quantity">
+                        </form>
                     </section>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
                 </section>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-trash"></i>
             </article>
 
             <article>
                 <picture>
                     <img src="Bilder/Bil.jpg" alt="Bilde av en bil som drifter">
                 </picture>
-                <section>
+                <section class="Product-details-2">
                     <h3>Product name</h3>
                     <p>Kr 1999</p>
                     <p>Farge: beige</p>
-                    <section>
-                        <label>Størrelse</label>
-                        <select class="size">
-                            <option>XS</option>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <label>Antall</label>
-                        <input type="number" class="quantity">
+                    <section class="Størrelse-Antall">
+                        <form>
+                            <label>Størrelse</label>
+                            <select class="size">
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <label>Antall</label>
+                            <input type="number" class="quantity">
+                        </form>
                     </section>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
                 </section>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-trash"></i>
             </article>
         </section>
 
-        <section>
+        <section id="Information">
             <h2>2. Dine opplysninger</h2>
-        </section>
-        <form>
             <h3>Leveringsadresse</h3>
-        <section>
-            <label for="fornavn">Fornavn</label>
-            <input type="text" id="fornavn"  placeholder="Nora*" required>
+            <section>
+                <form>
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" id="fornavn"  placeholder="Nora*" required>
 
-            <label for="etternavn">Etternavn</label>
-            <input type="text" id="etternavn"  placeholder="Nordman*" required>
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" id="etternavn"  placeholder="Nordman*" required>
 
-            <label for="gateadresse">Gateadresse</label>
-            <input type="text" id="gateadresse"  placeholder="BRA veien 4*" required>
+                    <label for="gateadresse">Gateadresse</label>
+                    <input type="text" id="gateadresse"  placeholder="BRA veien 4*" required>
 
-            <label for="postnummer">Postnummer</label>
-            <input type="text" id="postnummer"  placeholder="1752*" required>
+                    <label for="postnummer">Postnummer</label>
+                    <input type="text" id="postnummer"  placeholder="1752*" required>
 
-            <label for="poststed">Poststed</label>
-            <input type="text" id="poststed"  placeholder="Halden*" required>
+                    <label for="poststed">Poststed</label>
+                    <input type="text" id="poststed"  placeholder="Halden*" required>
+                </form>
+            </section>
+
+            <section>
+                <h3>Kontaktinformasjon</h3>
+            </section>
+
+            <section>
+                <label for="epost">E-post</label>
+                <input type="email" id="epost"  placeholder="Noranordman@hiof.no*" required>
+
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon"  placeholder="+4749***018" required>
+            </section>
+
+            <section id="Lagre-Avbryt">
+                <button type="submit">Lagre</button>
+                <a href="#" id="cancel">Avbryt</a>
+            </section>
         </section>
-
-        <section>
-            <h3>Kontaktinformasjon</h3>
-        </section>
-
-        <section>
-            <label for="epost">E-post</label>
-            <input type="email" id="epost"  placeholder="Noranordman@hiof.no*" required>
-
-            <label for="telefon">Telefon</label>
-            <input type="tel" id="telefon"  placeholder="+4749***018" required>
-        </section>
-
-        <section>
-            <button type="submit">Lagre</button>
-            <a href="#" class="cancel">Avbryt</a>
-        </section>
-        </form>
-        <form>
-                <h3>3. Levering</h3>
-                <h4>Leveringsvalg</h4>
-            <article>
+        <section id="Levering">
+            <h2>3. Levering</h2>
+            <h3>Leveringsvalg</h3>
+            <article id="Express-hjemlevering">
                 <label>
                     <input type="radio" name="levering" value="ekspress-levering">
                 </label>
                 <section>
                     <h4>Express Hjemlevering</h4>
                     <p>3-4 Virkedager</p>
+                    <section class="levering-ikoner">
+                        <p>59kr</p>
+                        <i class="fa-solid fa-truck"></i>
+                    </section>
                     <p>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. 
                     *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
-                        <section>
-                            <p>59kr</p> <i class="fa-solid fa-truck"></i>
-                        </section>
                 </section>
             </article>
-            <article>
-                <label>
-                    <input type="radio" name="levering" value="ekspress-pakke-levering-utleveringsted">
-                </label>
+            <article id="Express-pakke-levering">
+                <form>
+                    <label>
+                        <input type="radio" name="levering" value="ekspress-pakke-levering-utleveringsted">
+                    </label>
+                </form>
                 <section>
                     <h4>Express Pakke til utleveringssted</h4>
                     <p>1-3 Virkedager</p>
-                </section>
-                    <section>
+                    <section class="levering-ikoner">
                         <p>59kr</p> <i class="fa-solid fa-truck-fast"></i>
                     </section>
+                </section>
             </article>
-            <article>
+            <article id="Standard-levering">
                 <label>
                     <input type="radio" name="levering" value="standard-levering">
                 </label>
                 <section>
                     <h4>Standard Hjemlevering</h4>
                     <p>5-8 Virkedager</p>
-                    <p>Levers hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
-                </section>
-                    <section>
+                    <section class="levering-ikoner">
                         <p>Gratis</p> <i class="fa-solid fa-box"></i>
                     </section>
+                    <p>Levers hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                </section>
             </article>
-        </form>
-        <form>
-            <section>
-                <h3>Betaling</h3>
-                <h4>Betal med kort</h4>
-                <i class="fa-solid fa-credit-card"></i>
+        </section>
+        <section>
+            <section id="Betaling">
+                <h2>4. Betaling</h2>
+                <section id="Betaling-ikon">
+                    <h3>Betal med kort</h3>
+                    <i class="fa-solid fa-credit-card"></i>
+                </section>
+                <article>
+                    <section>
+                        <form>
+                            <label for="kortnummer">Kortnummer</label>
+                            <input type="text" id="kortnummer" placeholder="342452*****4435" required>
+
+                            <label for="utløps-dato">Utløpsdato</label>
+                            <input type="text" id="utløps-dato" placeholder="mm/dd/yyyy" required>
+
+                            <label for="cvv">CVC/CVV</label>
+                            <input type="text" id="cvv" placeholder="CVC/CVV" required>
+                        </form>
+                    </section>
+                    <section id="Box-kjop">
+                        <section>
+                            <p>Å betale inkl. mva.</p>
+                            <p id="antall-penger">1199 kr</p>
+                            <button type="submit">Fullfør kjøp</button>
+                        </section>
+                            <p id="vilkaar">
+                                Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige.
+                                Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger
+                                uriktige eller ufullstendige opplysninger
+                            </p>
+                            <section id="nyhetsbrev">
+                                <label>
+                                    <input type="checkbox">
+                                </label>
+                                    <p>Ja takk! Send nyhetsbrev til meg.</p>
+                            </section>
+                            <section id="tilbud">
+                                <label>
+                                    <input type="checkbox">
+                                </label>
+                                <p>Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</p>
+                            </section>
+                    </section>
+                </article>
             </section>
-            <article>
-                <section>
-                    <label for="kortnummer">Kortnummer</label>
-                    <input type="text" id="kortnummer" placeholder="342452*****4435" required>
-
-                    <label for="utløps-dato">Utløpsdato</label>
-                    <input type="text" id="utløps-dato" placeholder="mm/dd/yyyy" required>
-
-                    <label for="cvv">CVC/CVV</label>
-                    <input type="text" id="cvv" placeholder="CVC/CVV" required>
-                </section>
-                <section>
-                    <p>Å betale inkl. mva.</p>
-                    <p id="antall-penger">1199kr</p>
-                    <button type="submit">Fullfør kjøp</button>
-                </section>
-                <section>
-                    <p class="vilkaar">
-                        Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige.
-                        Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger
-                        uriktige eller ufullstendige opplysninger
-                    </p>
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                    <section>
-                        <p>Ja takk! Send nyhetsbrev til meg.</p>
-                    </section>
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                    <section>
-                        <p>Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</p>
-                    </section>
-                </section>
-            </article>
-        </form>
+        </section>
     </main>
-    <footer id="kontakt">
-        <section>
+    <footer id="Kontakt">
+        <section id="Logo">
             <h3>Logo</h3>
-            <p>Nor again is there anyone who loves or pursues</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
         </section>
-
-        <section>
-            <h3>Kontakt</h3>
-            <section>
-                <h4>Adresse:</h4>
-                <p>B R A Veien 4, 1757 Halden</p>
-
-                <h4>Telefon:</h4>
-                <p>69 60 80 00</p>
-
-                <h4>E-post:</h4>
-                <p>halden@hiof.no</p>
-
-                <h4>Åpningstider:</h4>
-                <p>Stenger 15:00</p>
+        <section id="Kontakt-oss-Snarveier-Sosiale-medier">
+            <section id="Kontakt-oss-Snarveier">
+                <section id="Kontakt-oss">
+                    <h3>Kontakt</h3>
+                    <section>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <section>
+                            <h4>Adresse:</h4>
+                            <p>B R A Veien 4, 1757 Halden</p>
+                        </section>
+                    </section>
+                    <section>
+                        <i class="fa-solid fa-phone"></i>
+                        <section>
+                            <h4>Telefon:</h4>
+                            <p>69 60 80 00</p>
+                        </section>
+                    </section>
+                    <section>
+                        <i class="fa-solid fa-envelope"></i>
+                        <section>
+                            <h4>E-post:</h4>
+                            <p>halden@hiof.no</p>
+                        </section>
+                    </section>
+                    <section>
+                        <i class="fa-regular fa-clock"></i>
+                        <section>
+                            <h4>Åpningstider:</h4>
+                            <p>Stenger 15:00</p>
+                        </section>
+                    </section>
+                </section>
+        
+                <section id="Snarveier">
+                    <h3>Snarveier</h3>
+                    <a href="#">Produkter</a>
+                    <a href="#">Kategorier</a>
+                    <a href="#">Kontakt oss</a>
+                </section>
             </section>
-        </section>
-
-        <section>
-            <h3>Snarveier</h3>
-            <a href="#">Produkter</a>
-            <a href="#">Kategorier</a>
-            <a href="#">Kontakt oss</a>
-        </section>
-
-        <section>
-            <h3>Sosiale medier</h3>
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://www.pinterest.com" target="_blank">
-                <i class="fa-brands fa-pinterest"></i>
-            </a>
+        
+            <section id="Sosiale-medier">
+                <h3>Sosiale medier</h3>
+                <section>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                </section>
+            </section>
         </section>
     </footer>
     </div>
