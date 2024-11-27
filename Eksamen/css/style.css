@@ -59,7 +59,6 @@ body {
     background: none;
     border: none;
     outline: none;
-    cursor: pointer;
     font-size: 18px;
     padding: 10px;
     color: #333;
@@ -214,7 +213,6 @@ i.fa-solid {
     font-size: 1.5rem;
     border: none;
     border-radius: 25px;
-    cursor: pointer;
     background-color: white;
     color: black;
 }
@@ -304,7 +302,6 @@ i.fa-solid {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 #slider .button2 {
@@ -399,7 +396,6 @@ i.fa-solid {
     border-radius: 25px;
     text-decoration: none;
     font-size: 1rem;
-    cursor: pointer;
 }
 
 #Populære-produkter nav a.button:hover {
@@ -417,9 +413,19 @@ i.fa-solid {
     background-color: #fff;
     border-radius: 25px;
     overflow: hidden;
+    position: relative;
 }
 
-.Product-card picture img {
+.Product-card .Heart-on-picture{
+    position: absolute;
+    top: 30px; 
+    right: 20px; 
+    background-color: rgb(143, 143, 143);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.Product-card img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -466,88 +472,22 @@ i.fa-solid {
 /* Populære produkter media desktop */
 
 @media (min-width: 1024px) {
-    #Populære-produkter {
+    #Product-Row-1{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        flex-direction: row;
+    }
+
+    #Product-Row-2{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #Product-Row-2 .Product-card{
         margin: 1rem;
-        gap: 2rem;
     }
 
-    #Populære-produkter section #header1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-    #Populære-produkter section:last-of-type {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    #Product-Row-1 .Product-card{
         margin: 1rem;
-        width: 100%;
-        max-width: 1200px;
-        justify-items: center;
-        gap: 2rem;
-    }
-
-    .Product-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 15px;
-        width: 100%;
-        max-width: 350px;
-        height: 100%;
-        overflow: hidden;
-        margin: 1rem;
-        text-align: center; 
-        margin-bottom: 0;
-    }
-
-    .Product-card picture img {
-        width: 100%;
-        height: 200px; 
-        object-fit: cover;
-        border-radius: 25px;
-    }
-
-    .Product-details {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-
-    .Product-details .product-name {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 0.5rem;
-    }
-
-    .Product-details .product-price {
-        font-size: 1rem;
-        font-weight: bold;
-        color: #000;
-    }
-
-    .Product-reviews {
-        display: flex;
-        flex-direction: row; 
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem; 
-        margin-top: 0.5rem;
-    }
-
-    .Product-reviews section {
-        display: flex;
-        align-items: center;
-        gap: 0.2rem; 
-    }
-
-    .Product-reviews p {
-        font-size: 0.9rem;
     }
 }
 
@@ -646,7 +586,7 @@ i.fa-solid {
     }
 }
 
-.Category-card picture img {
+.Category-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -660,6 +600,7 @@ i.fa-solid {
     border-radius: 25px;
     width: 100%;
     height: 300px;
+    border: solid black 1px;
 }
 
 .Category-card .Kategori-bilder {
@@ -684,7 +625,7 @@ i.fa-solid {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Fått litt hjelp av Chatgpt å klare å justere text på midten av bildet uten bruk av flexbox */
+    transform: translate(-50%, -50%); 
     color: white;
     font-size: 1.5rem;
     text-align: center;
@@ -725,7 +666,7 @@ i.fa-solid {
     max-width: 289px;
     background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 5px 10px black;
+    border: solid black 1px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -734,7 +675,7 @@ i.fa-solid {
     box-sizing: border-box;
 }
 
-.Anmeldelser article picture img {
+.Anmeldelser article img {
     width: 80px; 
     height: 80px;
     border-radius: 50%; 
@@ -883,7 +824,6 @@ i.fa-solid {
 
 /* Check out siden nedover */
 
-/* Link Styling */
 #Fortsett-handlingen a {
     text-decoration: none;
     color: purple;
@@ -900,6 +840,11 @@ i.fa-solid {
     justify-content: center;
     align-items: center;
     margin: 0.6rem;
+}
+
+#Kasse h2{
+    font-weight: bold;
+    font-size: 2rem
 }
 
 #Shopping-bag {
@@ -920,6 +865,7 @@ i.fa-solid {
 #Shopping-bag article img {
     width: 100%;
     max-width: 70%;
+    margin-top: 50px;
 }
 
 #Shopping-bag .Product-details-2 {
@@ -1172,6 +1118,13 @@ i.fa-solid {
     margin-top: 30px;
 }
 
+#Betaling #Box-kjop #Betaling-Bekreft-Kjoop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #Betaling #Box-kjop section p{
     display: flex;
     flex-direction: column;
@@ -1210,62 +1163,135 @@ i.fa-solid {
     gap: 10px;
 }
 
-@media (min-width:1024px) {
-    #Shopping-bag {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
+@media (min-width:1024px){
+
+    #Shopping-bag{
+        padding: 5rem;
     }
 
-    #Shopping-bag article {
+    #Shopping-bag .Product-details-2{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #Shopping-bag .Product-details-2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 50%;
+    }
+
+    #Shopping-bag article{
         display: flex;
         flex-direction: row;
+    }
+
+    #Shopping-bag article img{
+        width: 100%;
+        max-width: 30%;
+        margin-bottom: 30px;
+    }
+    
+    #Shopping-bag .Product-Ikoner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #Information{
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Information #fornavn{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Information #etternavn{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Information .Information-Label-Layout{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #Information .Information-Label-Layout .align-items-above{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 50%;
+    }
+
+    #Levering {
+        padding: 5rem;
+    }
+    
+    #Levering .Levering-Desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; 
+        justify-content: space-between;
+    }
+    
+    #Levering .Levering-Desktop label {
+        display: flex;
+        align-items: center; 
+        margin-right: 1rem; /
+    }
+    
+    #Levering .Levering-Desktop .Levering-Text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
-        gap: 2rem;
-        width: 100%;
-        max-width: 900px; 
-        border: 1px solid #e0e0e0;
-        padding: 1.5rem;
-        box-sizing: border-box;
     }
-
-    #Shopping-bag img {
-        max-width: 200px;
-        object-fit: cover;
+    
+    #Levering .Levering-Text h4 {
+        margin: 0; 
     }
-
-    #Shopping-bag .Product-details-2 {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
+    
+    #Levering .Levering-Text p {
+        margin-top: 0.5rem; 
+        color: #474747;
+        font-weight: bold;
     }
-
-    .Størrelse-Antall {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .size, .quantity {
-        width: 80px;
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-
-    i.fa-heart, i.fa-trash {
-        font-size: 1.5rem;
-    }
-
-    .Product-details-2 i {
-        margin-top: 1rem;
-    }
-
-    .Product-details-2 form {
+    
+    #Levering .Levering-Desktop .levering-ikoner {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        align-items: center;
+        gap: 0.5rem; 
+    }
+
+    #Betaling .Information-Label-Layout{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #Betaling .Information-Label-Layout .align-items-above{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 50%; 
+    }
+
+    #Betaling #Box-kjop #Betaling-Bekreft-Kjoop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 }
+    
