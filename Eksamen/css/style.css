@@ -399,11 +399,6 @@ i.fa-solid {
     font-size: 1rem;
 }
 
-#Populære-produkter nav a.button:hover {
-    background-color: black;
-    color: white;
-}
-
 .Product-card {
     display: flex;
     flex-direction: column;
@@ -493,44 +488,44 @@ i.fa-solid {
 }
 
 
-#Populære-kategorier section h2{
+#Populære-kategorier section h2 {
     text-align: center;
     font-size: 2rem;
 }
 
-#Populære-kategorier section p{
+#Populære-kategorier section p {
     text-align: center;
     font-size: 1rem;
 }
+
 #grid-container_2 {
     display: grid; 
-    grid-template-columns: repeat(1, 1fr); /* 1 kolonne, Mobile */
+    grid-template-columns: 1fr; /* Mobile først, en kolonne */
     gap: 1.5rem; 
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
 
-#grid-container_2 section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-#grid-container_2 section p {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* Desktop */
+/* Desktop Layout */
 @media (min-width: 1024px) {
-    #Populære-kategorier #grid-container_2 {
+    #grid-container_2 {
         grid-template-areas:
             "card1 card2 card3"
             "card4 card4 card5";
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 1.5rem;
+        margin: 1rem;
+    }
+
+    .Category-card:nth-child(1) {
+        grid-area: card1;
+        max-width: 386px;
+    }
+
+    .Category-card:nth-child(2) {
+        grid-area: card2;
+        max-width: 386px;
     }
 
     .Category-card:nth-child(3) {
@@ -540,43 +535,63 @@ i.fa-solid {
 
     .Category-card:nth-child(4) {
         grid-area: card4;
-        grid-column: span 2;
         max-width: 864px;
     }
 
     .Category-card:nth-child(5) {
         grid-area: card5;
-        max-width: 300px;
+        max-width: 298px;
+    }
+
+    .Category-card {
+        max-width: 100%;
+        height: 300px;
     }
 }
 
 /* Tablet Layout */
 @media (min-width: 768px) and (max-width: 1023px) {
-    #Populære-kategorier #grid-container_2 {
+    #grid-container_2 {
         grid-template-areas:
             "card1 card2"
             "card3 card3"
             "card4 card5";
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+        margin: 1rem;
     }
 
-    .Category-card:nth-child(3) {
+    .Category-card:nth-child(1) { 
+        grid-area: card1;
+        max-width: 386px;
+
+    }
+    .Category-card:nth-child(2) { 
+        grid-area: card2;
+        max-width: 386px;
+    }
+    .Category-card:nth-child(3) { 
         grid-area: card3;
+        max-width: 386px;
     }
-
-    .Category-card:nth-child(4) {
+    .Category-card:nth-child(4) { 
         grid-area: card4;
+        max-width: 864px;
+    }
+    .Category-card:nth-child(5) { 
+        grid-area: card5;
+        max-width: 298px;
     }
 
-    .Category-card:nth-child(5) {
-        grid-area: card5;
+    .Category-card {
+        max-width: 100%;
+        height: 300px; 
     }
 }
 
-/* Max for mobil */
+/* Mobile Layout */
 @media (max-width: 767px) {
-    #Populære-kategorier #grid-container_2 {
+    #grid-container_2 {
         grid-template-areas:
             "card1"
             "card2"
@@ -585,54 +600,63 @@ i.fa-solid {
             "card5";
         grid-template-columns: 1fr;
     }
+
+    .Category-card:nth-child(1) { 
+        grid-area: card1;
+        max-width: 386px;
+
+    }
+    .Category-card:nth-child(2) { 
+        grid-area: card2;
+        max-width: 386px;
+    }
+    .Category-card:nth-child(3) { 
+        grid-area: card3;
+        max-width: 386px;
+    }
+    .Category-card:nth-child(4) { 
+        grid-area: card4;
+        max-width: 864px;
+    }
+    .Category-card:nth-child(5) { 
+        grid-area: card5;
+        max-width: 298px;
+    }
+
+    .Category-card {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+.Category-card {
+    position: relative;
+    border-radius: 25px;
+    border: solid black 1px;
+    overflow: hidden;
 }
 
 .Category-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
-}
-
-
-.Category-card {
-    position: relative; 
-    overflow: hidden;
+    filter: blur(3px);
     border-radius: 25px;
-    width: 100%;
-    height: 300px;
-    border: solid black 1px;
-}
-
-.Category-card .Kategori-bilder {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    filter: blur(3px); 
-    border-radius: 25px; 
-}
-
-.Category-card .Kategori1-3{
-    width: 100%;
-    max-width: 386px;
-}
-
-.Category-card .Kategori4{
-    width: 100%;
-    min-width: 864px;
 }
 
 .Category-card .Category-name {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 1.5rem;
     text-align: center;
     padding: 5px 10px;
     border-radius: 5px;
+    font-weight: bold;
 }
+
 
 
 .Anmeldelser {
@@ -978,12 +1002,13 @@ i.fa-solid {
 }
 
 #Information section button{
-    width: 90%;
-    height: 50px;
+    width: 100%;
+    height: 65px;
     border: solid rgb(228, 228, 228) 1px;
     box-sizing: border-box;
     background-color: #474747;
     color: white;
+    font-size: 1.2rem;
 }
 
 #Information #Lagre-Avbryt #cancel{
@@ -1117,7 +1142,6 @@ i.fa-solid {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 2rem;
     border: solid rgb(228, 228, 228) 1px;
     box-sizing: border-box;
     background-color: #ffffff;
@@ -1356,6 +1380,8 @@ i.fa-solid {
     display: flex;
     flex-direction: row;
     gap: 15px;
+    width: 100%;
+    max-width: 700px;
 }
 
 #Bilde-seksjon-product #stort-bilde{
@@ -1515,6 +1541,11 @@ i.fa-solid {
     color: rgb(90, 1, 90);
 }
 
+#Lignende-produkter #Lignende-produkter-text a{
+    text-decoration: none;
+}
+
+
 #Lignende-produkter #Lignende-produkter-bilder-layout {
     display: flex;
     flex-direction: row;
@@ -1526,14 +1557,16 @@ i.fa-solid {
 
 #Lignende-produkter #Lignende-produkter-bilder-layout article {
     position: relative; 
-    width: 250px;
+    width: 230px;
     box-sizing: border-box;
 }
 
 #Lignende-produkter #Lignende-produkter-bilder-layout article img {
     width: 100%;
+    height: 230px;
     border-radius: 15px;
     display: block;
+    object-fit: cover;
 }
 
 #Lignende-produkter #Lignende-produkter-bilder-layout .Heart-on-picture {
@@ -1548,6 +1581,11 @@ i.fa-solid {
 #Lignende-produkter #Lignende-produkter-bilder-layout .Lignende-produkter-product-name-kr{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+#Lignende-produkter #Lignende-produkter-bilder-layout .Lignende-produkter-product-name-kr h4{
+    font-size: 1.4rem;
 }
 
 #Lignende-produkter #Lignende-produkter-bilder-layout .Lignende-produkter-reviews{
@@ -1608,6 +1646,8 @@ i.fa-solid {
         flex-direction: column;
         gap: 20px;
         height: 100%;
+        width: 100%;
+        max-width: 450px;
     }
 
     #Product-info-section, #Velg-størrelse-handlekurv-hjerte, #details {
@@ -1615,10 +1655,10 @@ i.fa-solid {
     }
 
     #Lignende-produkter #Layout-Desktop-Tittel{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 500px;
     }
 }
 
