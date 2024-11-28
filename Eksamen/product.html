@@ -7,10 +7,10 @@
     <link href="Ikoner/css/brands.css" rel="stylesheet">
     <link href="Ikoner/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Eksamen</title>
+    <title>Eksamen | Product</title>
 </head>
 <body>
-    <div id="grid-container">
+    <div id="Layout">
         <header id="global-header">
             <form class="search-bar" role="search">
                 <input type="text" placeholder="søk her">
@@ -37,38 +37,50 @@
                 </a>    
             </section>
         </header>
-    <main>
-        <section>
-            <ol>
-                <li>
-                    <a href="index.html">Hjem</a>
-                </li>
-                <li>></li>
-                <li>
-                    <a href="index.html/#Populære-kategorier">Kategori</a>
-                </li>
-                <li>></li>
-                <li>
-                    <a href="product.html">Produktnavn</a>
-                </li>
-            </ol>
-        </section>
-        <section>
-                <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
-                <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
-                <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
-                <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
-        </section>
-        <section>
-            <h3>Produktnavn</h3>
-                <section>
-                     <a href="#">Merkenavn</a>
-                     <p>5195 kr inkl. mva.</p>
-                     <p>Farge:</p>
-                     <p>beige</p>
+    <main id="Layout-Checkout">
+        <section id="Product-info">
+            <section id="broodsmulesti">
+                <ul>
+                    <li>
+                        <a href="index.html">Hjem</a>
+                    </li>
+                    <li>></li>
+                    <li>
+                        <a href="index.html#Populære-kategorier">Kategori</a>
+                    </li>
+                    <li>></li>
+                    <li id="Produktnavn1">
+                        <a href="product.html">Produktnavn</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="Layout-Desktop">
+                <section id="Bilde-seksjon-product">
+                    <section id="mindre-bilder">
+                        <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
+                        <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
+                        <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
+                    </section>
+                    <section id="stort-bilde">
+                        <img src="Bilder/Bil.jpg" alt="bilde av en bil som drifter">
+                    </section>
                 </section>
-            <section>
-                    <section>
+                <section id="Layout-Desktop-Produkt-Info-Details">
+                <section id="Product-info-section">
+                    <h3>Produktnavn</h3>
+                    <a href="#">Merkenavn</a>
+                    <p>5195 kr inkl. mva.</p>
+                    <section id="Product-info-section-2">
+                        <section id="Product-info-section-farge">
+                            <p>Farge:</p>
+                        </section>
+                        <section id="Product-info-section-beige">
+                            <p>beige</p>
+                        </section>
+                    </section>
+                </section>
+                <section id="Velg-størrelse-handlekurv-hjerte">
+                    <section id="velg-størrelse-2">
                         <label for="velg-størrelse"></label>
                         <select id="velg-størrelse">
                             <option value="">Velg størrelse</option>
@@ -79,13 +91,18 @@
                             <option value="extra-large">XL</option>
                         </select>
                     </section>
-                    <section>
-                        <button>Legg i handlekurv</button>
-                        <button></button>
+                    <section id="Legg-til-handlekurv-hjerte">
+                        <section id="Legg-til-handlekurv-button">
+                            <button>Legg i handlekurv</button>
+                        </section>
+                        <section id="Handlekurv">
                             <i class="fa-regular fa-heart"></i>
+                        </section>
                     </section>
-                    <section>
-                        <details>
+                </section>
+                <section id="details">
+                    <section class="section-details">
+                        <details class="detail-section">
                             <summary>Materiale og vedlikehold</summary>
                             <ul>
                                 <li>Overmateriale: 95% viskose, 5% elastan</li>
@@ -94,14 +111,14 @@
                             </ul>
                         </details>
                     </section>
-                    <section>
-                        <details>
+                    <section class="section-details">
+                        <details class="detail-section">
                             <summary>Produktdetaljer</summary>
                             <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavillions, award-winning fireworks and seasonal special events</p>
                         </details>
                     </section>
-                    <section>
-                        <details>
+                    <section class="section-details">
+                        <details class="detail-section">
                             <summary>Størrelsetabell</summary>
                             <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
                             <table>
@@ -224,113 +241,156 @@
                             </table>
                         </details>
                     </section>
+                    <section class="section-details">
+                        <details id="detail-section-2">
+                            <summary id="Styling-anmeldelser-details">
+                                <h4>Anmeldelser</h4>
+                                <span id="Styling-anmeldelser-details-ikoner">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    32
+                                </span>
+                            </summary>
+                            <section>
+                                <article id="box-anmeldelser">
+                                    <h4>Teddy Bober</h4>
+                                    <p>2024-10-02</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
+                                </article>
+                            </section>
+                        </details>
+                    </section>
+                </section>
             </section>
-            <section>
-                <h4>Anmeldelser</h4>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <p>32</p>
+            </section>
+            </section>          
+        <section id="Lignende-produkter">
+            <section id="Layout-Desktop-Tittel">
+                <h3>Lignende produkter</h3>
+                <section>
+                    <a id="arrow-justering" href="index.html#Populære-produkter">
+                        <i class="fa-solid fa-arrow-right"></i> Se flere lignende produkter
+                    </a>
+                </section>
+            </section>
+            <section id="Lignende-produkter-bilder-layout">
                 <article>
-                    <h4>Teddy Bober</h4>
-                    <p>2024-10-02</p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
+                    <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
+                    <section class="Heart-on-picture">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </section>
+                    <section class="Lignende-produkter-product-name-kr">
+                        <h4>Product name</h4>
+                        <p>kr 1999</p>
+                    </section>
+                    <section class="Lignende-produkter-reviews">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>842 Reviews</p>
+                    </section>
+                </article>
+                <article>
+                    <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
+                    <section class="Heart-on-picture">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </section>
+                    <section class="Lignende-produkter-product-name-kr">
+                        <h4>Product name</h4>
+                        <p>kr 1999</p>
+                    </section>
+                    <section class="Lignende-produkter-reviews">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>842 Reviews</p>
+                    </section>
+                </article>
+                <article>
+                    <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
+                    <section class="Heart-on-picture">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </section>
+                    <section class="Lignende-produkter-product-name-kr">
+                        <h4>Product name</h4>
+                        <p>kr 1999</p>
+                    </section>
+                    <section class="Lignende-produkter-reviews">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>842 Reviews</p>
+                    </section>
+                </article>
+                <article>
+                    <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
+                    <section class="Heart-on-picture">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </section>
+                    <section class="Lignende-produkter-product-name-kr">
+                        <h4>Product name</h4>
+                        <p>kr 1999</p>
+                    </section>
+                    <section class="Lignende-produkter-reviews">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>842 Reviews</p>
+                    </section>
+                </article>
+                <article>
+                    <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
+                    <section class="Heart-on-picture">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </section>
+                    <section class="Lignende-produkter-product-name-kr">
+                        <h4>Product name</h4>
+                        <p>kr 1999</p>
+                    </section>
+                    <section class="Lignende-produkter-reviews">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>842 Reviews</p>
+                    </section>
+                </article>
+                <article>
+                    <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
+                    <section class="Heart-on-picture">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </section>
+                    <section class="Lignende-produkter-product-name-kr">
+                        <h4>Product name</h4>
+                        <p>kr 1999</p>
+                    </section>
+                    <section class="Lignende-produkter-reviews"> 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p>842 Reviews</p>
+                    </section>
                 </article>
             </section>
-        </section>
-        <section>
-            <h3>Lignende produkter</h3>
-            <article>
-                <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
-
-                <h4>Product name</h4>
-                <p>kr 1999</p>
-                <section>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <p>842 Reviews</p>
-                </section>
-            </article>
-            <article>
-                <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
-                <h4>Product name</h4>
-                <p>kr 1999</p>
-                <section>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <p>842 Reviews</p>
-                </section>
-            </article>
-            <article>
-                <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
-                <h4>Product name</h4>
-                <p>kr 1999</p>
-                <section>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <p>842 Reviews</p>
-                </section>
-            </article>
-            <article>
-                <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
-                <h4>Product name</h4>
-                <p>kr 1999</p>
-                <section>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <p>842 Reviews</p>
-                </section>
-            </article>
-            <article>
-                <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
-                <h4>Product name</h4>
-                <p>kr 1999</p>
-                <section>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <p>842 Reviews</p>
-                </section>
-            </article>
-            <article>
-                <img src="Bilder/Insect.jpg" alt="Bilde av et insekt">
-                <h4>Product name</h4>
-                <p>kr 1999</p>
-                <section>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <p>842 Reviews</p>
-                </section>
-            </article>
-        </section>
-        <section>
-            <a href="#">
-                <i class="fa-solid fa-arrow-right"></i> Se flere lignende produkter
-            </a>
         </section>
     </main>
     <footer id="Kontakt">

@@ -11,7 +11,7 @@ body {
     background-color: #f9f9f9;
 }
 
-#grid-container {
+#Layout {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,6 @@ body {
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     border-radius: 25px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .search-bar input {
@@ -215,6 +214,7 @@ i.fa-solid {
     border-radius: 25px;
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 #slider {
@@ -222,7 +222,7 @@ i.fa-solid {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    max-width: 900px;
+    max-width: 1200px;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -286,13 +286,13 @@ i.fa-solid {
 }
 
 .slide-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .slide-text p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
@@ -313,6 +313,7 @@ i.fa-solid {
     padding: 10px;
     position: absolute;
     top: 90%;
+    cursor: pointer;
 }
 
 #slider #prev {
@@ -782,11 +783,13 @@ i.fa-solid {
     display: flex;
     flex-direction: column; 
     gap: 10px;
+    width: 30%;
     align-items: flex-start; 
 }
 
 #Kontakt #Sosiale-medier h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    display: flex;
 }
 
 #Kontakt #Sosiale-medier section {
@@ -1078,6 +1081,7 @@ i.fa-solid {
     box-sizing: border-box;
     background-color: #ffffff;
     margin-top: 15px;
+    font-weight: bold;
 }
 
 #Betaling #utløps-dato{
@@ -1091,6 +1095,7 @@ i.fa-solid {
     background-color: #ffffff;
     margin-top: 15px;
     color: black;
+    font-weight: bold;
 }
     
 
@@ -1105,6 +1110,7 @@ i.fa-solid {
     box-sizing: border-box;
     background-color: #ffffff;
     margin-top: 15px;
+    font-weight: bold;
 }
 
 #Betaling #Box-kjop{
@@ -1162,6 +1168,8 @@ i.fa-solid {
     align-items: center;
     gap: 10px;
 }
+
+/* Desktop Media Checkout siden */
 
 @media (min-width:1024px){
 
@@ -1273,6 +1281,10 @@ i.fa-solid {
         gap: 0.5rem; 
     }
 
+    #Betaling{
+        padding: 5rem;
+    }
+
     #Betaling .Information-Label-Layout{
         display: flex;
         flex-direction: row;
@@ -1294,4 +1306,322 @@ i.fa-solid {
         align-items: center;
     }
 }
-    
+
+#Layout-Checkout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Product-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+#Product-info #broodsmulesti #Produktnavn1 a{
+    font-weight: bold;
+}
+
+#broodsmulesti{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+#broodsmulesti ul{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+#broodsmulesti ul li a{
+    color: black;
+    text-decoration: none;
+
+}
+
+#broodsmulesti ul li{
+    list-style: none;
+}
+
+#Bilde-seksjon-product{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#Bilde-seksjon-product #stort-bilde{
+    gap: 15px;
+}
+
+#Bilde-seksjon-product #stort-bilde img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Bilde-seksjon-product #mindre-bilder{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#Bilde-seksjon-product #mindre-bilder img{
+    width: 100%;
+    gap: 15px;
+}
+
+#Product-info-section h3{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#Product-info-section a{
+    color: rgb(104, 104, 104);
+}
+
+#Product-info-section #Product-info-section-2{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#Product-info-section #Product-info-section-farge{
+    font-size: 1rem;
+}
+
+#Product-info-section #Product-info-section-beige{
+    font-size: 1rem;
+    font-weight: bold
+}
+
+#Velg-størrelse-handlekurv-hjerte {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; 
+}
+
+#Velg-størrelse-handlekurv-hjerte #velg-størrelse-2 #velg-størrelse{
+    width: 100%;
+    height: 50px;
+    border: solid black 1px;
+}
+
+#Legg-til-handlekurv-hjerte {
+    display: flex;
+    width: 100%; 
+    gap: 10px; 
+}
+
+#Legg-til-handlekurv-button {
+    flex: 1;
+}
+
+#Legg-til-handlekurv-button button {
+    width: 100%; 
+    background-color: black;
+    color: white;
+    height: 50px;
+    font-weight: bold;
+    border: none; 
+}
+
+#Handlekurv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 1px;
+    width: 50px; 
+    height: 50px; 
+}
+
+#details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#details .section-details{
+    border-top: solid black 1px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.detail-section {
+    padding: 1.5rem
+}
+
+.detail-section summary {
+    position: relative;
+    list-style: none; 
+    padding-left: 20px; 
+    font-weight: bold;
+}
+
+.detail-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.detail-section summary::before {
+    content: "+"; 
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.section-details #detail-section-2 #Styling-anmeldelser-details-ikoner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+.section-details #detail-section-2 #Styling-anmeldelser-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-details #detail-section-2 #box-anmeldelser{
+    border: 1px rgb(175, 175, 175) solid;
+    border-radius: 25px;
+    padding: 1.5rem;
+}
+
+#Lignende-produkter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#Lignende-produkter #arrow-justering i {
+    color: rgb(90, 1, 90);
+}
+
+#Lignende-produkter #Lignende-produkter-bilder-layout {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 15px; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#Lignende-produkter #Lignende-produkter-bilder-layout article {
+    position: relative; 
+    width: 250px;
+    box-sizing: border-box;
+}
+
+#Lignende-produkter #Lignende-produkter-bilder-layout article img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+#Lignende-produkter #Lignende-produkter-bilder-layout .Heart-on-picture {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: rgb(143, 143, 143); 
+    border-radius: 25%;
+    padding: 5px; 
+}
+
+#Lignende-produkter #Lignende-produkter-bilder-layout .Lignende-produkter-product-name-kr{
+    display: flex;
+    justify-content: space-between;
+}
+
+#Lignende-produkter #Lignende-produkter-bilder-layout .Lignende-produkter-reviews{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Desktop Media for Product siden */
+
+@media (min-width: 1024px) {
+    #Layout-Desktop {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 40px; 
+    }
+
+    #Bilde-seksjon-product {
+        flex: 0 0 50%; 
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    #mindre-bilder {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #mindre-bilder img {
+        width: 120px;
+        height: 140px;
+        cursor: pointer;
+        border-radius: 5px;
+        object-fit: cover; 
+    }
+
+    #stort-bilde {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #stort-bilde img {
+        width: 100%;
+        max-height: 700px; 
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover; 
+    }
+
+    #Layout-Desktop-Produkt-Info-Details {
+        flex: 1.5; 
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+    }
+
+    #Product-info-section, #Velg-størrelse-handlekurv-hjerte, #details {
+        margin-bottom: 20px; 
+    }
+
+    #Lignende-produkter #Layout-Desktop-Tittel{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 500px;
+    }
+}
+
+
+
+
